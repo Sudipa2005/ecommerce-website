@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>🛒 Your Cart</h1>
+</nav>
+
+<div class="cart" id="cartItems"></div>
+<h2 id="totalPrice"></h2>
+
+<div style="text-align:center;">
+  <button class="btn" onclick="proceedToPayment()">Proceed to Payment 💳</button>
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let container = document.getElementById("cartItems");
+let total = 0;
+
+if(cart.length === 0){
+  container.innerHTML = "<p>Your cart is empty.</p>";
+}else{
+  cart.forEach(item=>{
+    let price = parseInt(item.price.replace('₹',''));
+    total += price;
+
+    container.innerHTML += `
+      <div class="product-card">
+        <img src="${item.image}" width="150">
+        <h3>${item.name}</h3>
+        <p>${item.price}</p>
+      </div>
+    `;
+  });
+  document.getElementById("totalPrice").innerText="Total: ₹"+total;
+}
+
+function proceedToPayment(){
+  window.location.href="payment.html";
+}
+</script>
+
+</body>
+</html>

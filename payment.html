@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>💳 Payment Gateway</h1>
+</nav>
+
+<div style="text-align:center; margin-top:50px;">
+  <h2>Select Payment Method</h2>
+  <button class="btn" onclick="payNow()">UPI</button>
+  <button class="btn" onclick="payNow()">Credit Card</button>
+  <button class="btn" onclick="payNow()">Cash on Delivery</button>
+</div>
+
+<script>
+function payNow(){
+  alert("Payment Successful 🎉 (Demo Mode)");
+  localStorage.removeItem("cart");
+  window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>

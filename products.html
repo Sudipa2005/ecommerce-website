@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="products-page">
+
+<nav class="navbar">
+  <h1>💎 Jewelry Store</h1>
+</nav>
+
+<h2 class="category">💍 Rings</h2>
+<div class="product-container">
+
+  <div class="product-card">
+    <img src="images/ring1.jpg">
+    <h3>Diamond Ring</h3>
+    <p class="price">₹2999</p>
+    <button class="btn" onclick="addToCart('Diamond Ring','₹2999','images/ring1.jpg')">Add to Cart</button>
+    <button class="btn" onclick="addToWishlist('Diamond Ring','₹2999','images/ring1.jpg')">❤️ Wishlist</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/ring2.jpg">
+    <h3>Gold Ring</h3>
+    <p class="price">₹3499</p>
+    <button class="btn" onclick="addToCart('Gold Ring','₹3499','images/ring2.jpg')">Add to Cart</button>
+    <button class="btn" onclick="addToWishlist('Gold Ring','₹3499','images/ring2.jpg')">❤️ Wishlist</button>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
